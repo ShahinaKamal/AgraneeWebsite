@@ -1,0 +1,12 @@
+@import "variables";
+@import "base";
+@import "components";
+@import "layout";
+
+.narrow{
+    width:80%;
+    margin:0 auto;
+}
+.section-bg {
+    background-color: #f7f7f7;
+}

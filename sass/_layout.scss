@@ -1,0 +1,130 @@
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+.header {
+  padding: 0;
+
+  background-color: white;
+  transition: all 0.5s;
+  //z-index: 997;
+  color: #ffffff !important;
+  //width:100%;
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+
+button.navbar-toggler {
+  outline: 0 !important;
+  border-color: none;
+}
+
+.navbar {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.1rem;
+  // background: rgba(0,0,0,.6) !important;
+  &-brand img {
+    height: 2.5rem;
+  }
+}
+ .navbar-nav {
+ 
+  .nav-item {
+   padding-right: .7rem;
+    .nav-link {
+      color: $secondary-color-2 !important;
+      padding-top:.8rem;
+    }
+    .nav-link {
+      &:active,
+      &:hover {
+        background: #fe8c00;
+        background: -webkit-linear-gradient(
+          to right,
+          $primary-color-1,
+          $primary-color-2
+        );
+        background: linear-gradient(
+          to right,
+          $primary-color-1,
+          $primary-color-2
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+}
+
+//landing page
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+//about page
+
+.about {
+  border-radius:5px;
+  background-color: $black-background;
+  h5{
+
+    color:$primary-color-1;
+  }
+  .jumbotron{
+    background-color:$black-background;
+   // color: #e9ecef;
+   color:$black-background-font-color;
+   
+  }
+  img{
+    border-radius: 5px;
+    box-shadow: 2rem 2rem $primary-color-1;
+  }
+  &-image-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+}
+
+//client section start
+.clients
+{
+  .jumbotron{
+    background-color: #fff;
+  }
+}
+//client section end
+
+//about page end
+
+.portfolio
+{
+  .jumbotron{
+    background-color: #fff;
+  }
+}
+
+//services
+.services
+{
+  .jumbotron{
+   background-color: #fff;
+  }
+}
+
+//footer
+.footer{
+  background-color: $black-background;
+  .jumbotron{
+    background-color:$black-background;
+    color:$black-background-font-color;
+  }
+}
