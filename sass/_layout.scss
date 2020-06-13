@@ -30,16 +30,20 @@ button.navbar-toggler {
     height: 2.5rem;
   }
 }
+
+// .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+//   color: $secondary-color-2 !important;
+// }
+
+
+
  .navbar-nav {
  
   .nav-item {
    padding-right: .7rem;
+  
     .nav-link {
-      color: $secondary-color-2 !important;
       padding-top:.8rem;
-    }
-    .nav-link {
-      &:active,
       &:hover {
         background: #fe8c00;
         background: -webkit-linear-gradient(
@@ -56,6 +60,9 @@ button.navbar-toggler {
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
+    }
+    a .nav-link.active{
+      color:$primary-color-1 !important;
     }
   }
 }
@@ -74,7 +81,7 @@ button.navbar-toggler {
   background-color: $black-background;
   h5{
 
-    color:$primary-color-1;
+    //color:$primary-color-1;
   }
   .jumbotron{
     background-color:$black-background;
@@ -90,6 +97,14 @@ button.navbar-toggler {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  .principles{
+   // background-color:rgba($primary-color-1,.9) ;
+  // color:white;
+    padding:1rem;
+    h5{
+      color:$primary-color-1;
+    }
   }
 
 }
@@ -108,23 +123,35 @@ button.navbar-toggler {
 .portfolio
 {
   .jumbotron{
-    background-color: #fff;
+    background-color:#fff;;
   }
 }
 
 //services
 .services
 {
+  //background-color: #e9ecef;
   .jumbotron{
-   background-color: #fff;
+    background-color: #fff;
   }
 }
 
 //footer
 .footer{
-  background-color: $black-background;
-  .jumbotron{
-    background-color:$black-background;
+  background-color: $black-background;   
     color:$black-background-font-color;
-  }
+  
 }
+.bottom-footer{
+  background-color: $black-background;   
+  color:$black-background-font-color;
+}
+
+@media (min-width: 768px) {
+  .carousel-multi-item-2 .col-md-3 {
+  float: left;
+  width: 25%;
+  max-width: 100%; } }
+  
+  .carousel-multi-item-2 .card img {
+  border-radius: 2px; }
