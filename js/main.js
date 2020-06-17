@@ -60,7 +60,7 @@ function loadFromFolder(folderName){
   $('.carousel-inner').html("");
   var carousel_item_div = document.createElement("div"); 
   var counter=1;
-  var carousel_item_per_slide=6;
+  var carousel_item_per_slide=3;
 
     carousel_item_div.setAttribute("class","carousel-item active")
    
@@ -91,19 +91,19 @@ function loadFromFolder(folderName){
                     var slide_item = document.createElement("div");   // Create a <button> div.
 
                     if(folderName==='Latest'){
-                      slide_item.setAttribute("class","col-md-4 mb-4 filter-latest"); 
+                      slide_item.setAttribute("class","col-md-4 mb-4 portfolio-item filter-latest"); 
                     }
                     else if(folderName==='Branding'){
-                      slide_item.setAttribute("class","col-md-4 mb-4 filter-branding");
+                      slide_item.setAttribute("class","col-md-4 mb-4  portfolio-item filter-branding");
                     }
                     else if(folderName==='Events'){
-                      slide_item.setAttribute("class","col-md-4 mb-4 filter-events");
+                      slide_item.setAttribute("class","col-md-4 mb-4  portfolio-item filter-events");
                     }
                     else if(folderName==='Promotion'){
-                      slide_item.setAttribute("class","col-md-4 mb-4  filter-promotions");
+                      slide_item.setAttribute("class","col-md-4 mb-4  portfolio-item filter-promotions");
                     }
                     else if(folderName==='Stall_Design'){
-                      slide_item.setAttribute("class","col-md-4 mb-4 filter-designs");
+                      slide_item.setAttribute("class","col-md-4 mb-4  portfolio-item filter-designs");
                     }
 
                     var card_div=document.createElement("div");
