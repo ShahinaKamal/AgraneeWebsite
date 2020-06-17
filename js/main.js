@@ -1,6 +1,16 @@
 !(function($) {
     "use strict";
 
+
+    // Preloader
+  $(window).on('load', function() {
+    if ($('#preloader').length) {
+      $('#preloader').delay(100).fadeOut('slow', function() {
+        $(this).remove();
+      });
+    }
+  });
+
 // import {glob } from 'glob';
 // import { readFile } from 'fs';
  
@@ -50,6 +60,7 @@ function loadFromFolder(folderName){
   $('.carousel-inner').html("");
   var carousel_item_div = document.createElement("div"); 
   var counter=1;
+  var carousel_item_per_slide=6;
 
     carousel_item_div.setAttribute("class","carousel-item active")
    
@@ -67,13 +78,13 @@ function loadFromFolder(folderName){
                
                 $(data).find("a:contains(" + (fileextension[0]) + "), a:contains(" + (fileextension[1]) + ")").each(function () {
                   console.log("counter"+counter);
-                  if(counter>3 && counter %3==1){
+                  if(counter>3 && counter % carousel_item_per_slide==1){
                     carousel_item_div=document.createElement("div");
                     carousel_item_div.setAttribute("class","carousel-item");
                   }
                    
                     var filename = this.href.replace(window.location.host, "").replace("http://", "");
-                    console.log(filename);
+                    console.log("filename================"+filename);
                     var slide_item = document.createElement("div");   // Create a <button> div.
 
                     if(folderName==='Latest'){
@@ -95,7 +106,8 @@ function loadFromFolder(folderName){
                     var card_div=document.createElement("div");
                     card_div.setAttribute("class","card");
                     var img=document.createElement("img");
-                    img.src=filename;
+                    img.src=window.location.href+filename;
+                    console.log("image src====================="+img.src);
                     img.classList.add('img-fluid');
                     console.log(img);
                     card_div.appendChild(img);
@@ -121,22 +133,37 @@ function loadFromFolder(folderName){
 
 
 
+// Toggle .header-scrolled class to #header when page is scrolled
+$(window).scroll(function() {
+  if ($(this).scrollTop() > 100) {
+    $('#header').addClass('header-scrolled');
+    $('#topbar').addClass('topbar-scrolled');
+  } else {
+    $('#header').removeClass('header-scrolled');
+    $('#topbar').removeClass('topbar-scrolled');
+  }
+});
 
- // Back to top button
-//  $(window).scroll(function() {
-//     if ($(this).scrollTop() > 100) {
-//       $('.back-to-top').fadeIn('slow');
-//     } else {
-//       $('.back-to-top').fadeOut('slow');
-//     }
-//   });
+if ($(window).scrollTop() > 100) {
+  $('#header').addClass('header-scrolled');
+  $('#topbar').addClass('topbar-scrolled');
+}
 
-//   $('.back-to-top').click(function() {
-//     $('html, body').animate({
-//       scrollTop: 0
-//     }, 1500, 'easeInOutExpo');
-//     return false;
-//   });
+// Back to top button
+$(window).scroll(function() {
+  if ($(this).scrollTop() > 100) {
+    $('.back-to-top').fadeIn('slow');
+  } else {
+    $('.back-to-top').fadeOut('slow');
+  }
+});
+
+$('.back-to-top').click(function() {
+  $('html, body').animate({
+    scrollTop: 0
+  }, 1500, 'easeInOutExpo');
+  return false;
+});
 
 
 
@@ -187,6 +214,9 @@ function loadFromFolder(folderName){
 
     // Initiate venobox (lightbox feature used in portofilo)
     $(document).ready(function() {
+      $('[data-spy="scroll"]').each(function () {
+        var $spy = $(this).scrollspy('refresh')
+      })
       $('.venobox').venobox();
     });
   });
