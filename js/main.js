@@ -83,7 +83,10 @@ function loadFromFolder(folderName){
                     carousel_item_div.setAttribute("class","carousel-item");
                   }
                    
-                    var filename = this.href.replace(window.location.host, "").replace("http://", "");
+                    if(window.location.protocol==="http:")
+                    var filename = this.href.replace(window.location.host, "").replace("http:///", "");
+                    if(window.location.protocol==="https:")
+                    var filename = this.href.replace(window.location.host, "").replace("https:///", "");
                     console.log("filename================"+filename);
                     var slide_item = document.createElement("div");   // Create a <button> div.
 
@@ -106,7 +109,7 @@ function loadFromFolder(folderName){
                     var card_div=document.createElement("div");
                     card_div.setAttribute("class","card");
                     var img=document.createElement("img");
-                    img.src=window.location.href+filename;
+                    img.src=filename;
                     console.log("image src====================="+img.src);
                     img.classList.add('img-fluid');
                     console.log(img);
