@@ -272,18 +272,19 @@ h3.heading {
   }
   
  // overflow: scroll;
-  //.portfoilo-container{
-  //   height:auto;
-  //   width:auto;
-  // }
+  .portfoilo-container{
+    position: relative;
+    height:auto;
+    //width:auto;
+  }
    .carousel-inner{
     min-height:300px;
     //overflow: scroll;
     //width:auto;
   }
   .portfolio-item {
-    margin-bottom: 2rem;
-   // height:15rem;
+   // margin-bottom: 2rem;
+    //padding:2rem;
   }
   #portfolio-filters {
     padding: 0;
@@ -359,6 +360,7 @@ h3.heading {
       z-index: 13;
     }
     .service-image-right img {
+      
       //border-radius: 5px;
       box-shadow: 1rem 1rem 0px 0px $primary-color-1;
     }

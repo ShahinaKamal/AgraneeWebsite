@@ -127,15 +127,16 @@ button.navbar-toggler {
    
   }
   img{
-    border-radius: 5px;
-    box-shadow: 2rem 2rem $primary-color-1;
+   // border-radius: 5px;
+   box-shadow: 1rem 1rem 0px 0px $primary-color-1;
   }
   &-image-row{
+    margin-top:2rem;
     display: flex;
    justify-content: center;
      align-items: center;
     
-    padding:2rem;
+    //padding:2rem;
     color:$black-background-font-color;
 
   }

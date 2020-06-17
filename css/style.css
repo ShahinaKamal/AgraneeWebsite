@@ -194,10 +194,11 @@ h3.heading {
     padding-right: 1rem; }
     .portfolio .controls-top a {
       color: #f83600; }
+  .portfolio .portfoilo-container {
+    position: relative;
+    height: auto; }
   .portfolio .carousel-inner {
     min-height: 300px; }
-  .portfolio .portfolio-item {
-    margin-bottom: 2rem; }
   .portfolio #portfolio-filters {
     padding: 0;
     text-decoration: none;
@@ -454,13 +455,12 @@ button.navbar-toggler {
     background-color: #1e1e1e;
     color: rgba(255, 255, 255, 0.6); }
   .about img {
-    border-radius: 5px;
-    box-shadow: 2rem 2rem #f83600; }
+    box-shadow: 1rem 1rem 0px 0px #f83600; }
   .about-image-row {
+    margin-top: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
     color: rgba(255, 255, 255, 0.6); }
   .about .principles {
     padding: 1rem; }
