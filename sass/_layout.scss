@@ -37,12 +37,30 @@ button.navbar-toggler {
 
 
 
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+  background: #fe8c00;
+  background-image: -webkit-linear-gradient(
+    to right,
+    $primary-color-1,
+    $primary-color-2
+  );
+  background: linear-gradient(
+    to right,
+    $primary-color-1,
+    $primary-color-2
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
  .navbar-nav {
  
+
+
   .nav-item {
    padding-right: .7rem;
-  
-    .nav-link {
+ 
+  .nav-link {
       padding-top:.8rem;
       &:hover {
         background: #fe8c00;
@@ -64,6 +82,19 @@ button.navbar-toggler {
     a .nav-link.active{
       color:$primary-color-1 !important;
     }
+    .navbar-light .navbar-nav .nav-link {
+      color: #111;
+   }
+    a{
+      display: block;
+      position: relative;
+      color: #111 !important;
+      transition: 0.3s;
+     // font-size: 13px;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-family: "Lato", sans-serif;
+    }
   }
 }
 
@@ -78,15 +109,21 @@ button.navbar-toggler {
 
 .about {
   border-radius:5px;
-  background-color: $black-background;
+  background-color: #1e1e1e;
+  .heading{
+    color:#fff;
+  }
   h5{
 
-    //color:$primary-color-1;
+    color:#fff;
   }
   .jumbotron{
-    background-color:$black-background;
-   // color: #e9ecef;
-   color:$black-background-font-color;
+    //background-color:$light-grey-2;
+    background-color: #1e1e1e;
+    
+    color:$black-background-font-color;
+   
+   //color:$grey-background-font-color;
    
   }
   img{
@@ -95,8 +132,12 @@ button.navbar-toggler {
   }
   &-image-row{
     display: flex;
-    justify-content: center;
-    align-items: center;
+   justify-content: center;
+     align-items: center;
+    
+    padding:2rem;
+    color:$black-background-font-color;
+
   }
   .principles{
    // background-color:rgba($primary-color-1,.9) ;
@@ -112,8 +153,9 @@ button.navbar-toggler {
 //client section start
 .clients
 {
+  background-color: $light-grey-3;
   .jumbotron{
-    background-color: #fff;
+    background-color: $light-grey-3;
   }
 }
 //client section end
@@ -138,12 +180,12 @@ button.navbar-toggler {
 
 //footer
 .footer{
-  background-color: $black-background;   
-    color:$black-background-font-color;
+ // background-color: $top-footer-background-1; 
+   // color:$black-background-font-color;
   
 }
 .bottom-footer{
-  background-color: $black-background;   
+  background-color:$bottom-footer-background;   
   color:$black-background-font-color;
 }
 
@@ -155,3 +197,10 @@ button.navbar-toggler {
   
   .carousel-multi-item-2 .card img {
   border-radius: 2px; }
+
+  .whyus{
+    background-color: $light-grey-3;
+    .jumbotron{
+      background-color: $light-grey-3;
+    }
+  }

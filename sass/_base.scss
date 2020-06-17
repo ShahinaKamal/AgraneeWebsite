@@ -11,13 +11,14 @@ body{
     line-height: 1.6;
     min-height: 100vh;
     color: #505962;
+    position: relative;
 }
 *,*::before,*::after{
     margin: 0;
     padding: 0;
     box-sizing: inherit;
 }
-a{
+a:link,a:active,a:hover{
   text-decoration: none;
 }
 
