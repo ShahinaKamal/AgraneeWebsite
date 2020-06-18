@@ -31,37 +31,27 @@ button.navbar-toggler {
   }
 }
 
-// .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
-//   color: $secondary-color-2 !important;
-// }
-
-
-
-.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .show > .nav-link {
   background: #fe8c00;
   background-image: -webkit-linear-gradient(
     to right,
     $primary-color-1,
     $primary-color-2
   );
-  background: linear-gradient(
-    to right,
-    $primary-color-1,
-    $primary-color-2
-  );
+  background: linear-gradient(to right, $primary-color-1, $primary-color-2);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
- .navbar-nav {
- 
-
-
+.navbar-nav {
   .nav-item {
-   padding-right: .7rem;
- 
-  .nav-link {
-      padding-top:.8rem;
+    padding-right: 0.7rem;
+
+    .nav-link {
+      padding-top: 0.8rem;
       &:hover {
         background: #fe8c00;
         background: -webkit-linear-gradient(
@@ -79,18 +69,18 @@ button.navbar-toggler {
         -webkit-text-fill-color: transparent;
       }
     }
-    a .nav-link.active{
-      color:$primary-color-1 !important;
+    a .nav-link.active {
+      color: $primary-color-1 !important;
     }
     .navbar-light .navbar-nav .nav-link {
       color: #111;
-   }
-    a{
+    }
+    a {
       display: block;
       position: relative;
       color: #111 !important;
       transition: 0.3s;
-     // font-size: 13px;
+      // font-size: 13px;
       text-transform: uppercase;
       font-weight: 600;
       font-family: "Lato", sans-serif;
@@ -108,54 +98,49 @@ button.navbar-toggler {
 //about page
 
 .about {
-  border-radius:5px;
+  border-radius: 5px;
   background-color: #1e1e1e;
-  .heading{
-    color:#fff;
+  .heading {
+    color: #fff;
   }
-  h5{
-
-    color:#fff;
+  h5 {
+    color: #fff;
   }
-  .jumbotron{
+  .jumbotron {
     //background-color:$light-grey-2;
     background-color: #1e1e1e;
-    
-    color:$black-background-font-color;
-   
-   //color:$grey-background-font-color;
-   
-  }
-  img{
-   // border-radius: 5px;
-   box-shadow: 1rem 1rem 0px 0px $primary-color-1;
-  }
-  &-image-row{
-    margin-top:2rem;
-    display: flex;
-   justify-content: center;
-     align-items: center;
-    
-    //padding:2rem;
-    color:$black-background-font-color;
 
+    color: $black-background-font-color;
+
+    //color:$grey-background-font-color;
   }
-  .principles{
-   // background-color:rgba($primary-color-1,.9) ;
-  // color:white;
-    padding:1rem;
-    h5{
-      color:$primary-color-1;
+  img {
+    // border-radius: 5px;
+    box-shadow: 1rem 1rem 0px 0px $primary-color-1;
+  }
+  &-image-row {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    //padding:2rem;
+    color: $black-background-font-color;
+  }
+  .principles {
+    // background-color:rgba($primary-color-1,.9) ;
+    // color:white;
+    padding: 1rem;
+    h5 {
+      color: $primary-color-1;
     }
   }
-
 }
 
 //client section start
-.clients
-{
+.clients {
   background-color: $light-grey-3;
-  .jumbotron{
+  .jumbotron {
     background-color: $light-grey-3;
   }
 }
@@ -163,45 +148,42 @@ button.navbar-toggler {
 
 //about page end
 
-.portfolio
-{
-  .jumbotron{
-    background-color:#fff;;
+.portfolio {
+  .jumbotron {
+    background-color: #fff;
   }
 }
 
 //services
-.services
-{
+.services {
   //background-color: #e9ecef;
-  .jumbotron{
+  .jumbotron {
     background-color: #fff;
   }
 }
 
 //footer
-.footer{
- // background-color: $top-footer-background-1; 
-   // color:$black-background-font-color;
-  
-}
-.bottom-footer{
-  background-color:$bottom-footer-background;   
-  color:$black-background-font-color;
+
+.bottom-footer {
+  background-color: $bottom-footer-background;
+  color: $black-background-font-color;
 }
 
 @media (min-width: 768px) {
   .carousel-multi-item-2 .col-md-3 {
-  float: left;
-  width: 25%;
-  max-width: 100%; } }
-  
-  .carousel-multi-item-2 .card img {
-  border-radius: 2px; }
-
-  .whyus{
-    background-color: $light-grey-3;
-    .jumbotron{
-      background-color: $light-grey-3;
-    }
+    float: left;
+    width: 25%;
+    max-width: 100%;
   }
+}
+
+.carousel-multi-item-2 .card img {
+  border-radius: 2px;
+}
+
+.whyus {
+  background-color: $light-grey-3;
+  .jumbotron {
+    background-color: $light-grey-3;
+  }
+}

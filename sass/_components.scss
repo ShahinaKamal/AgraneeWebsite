@@ -1,4 +1,6 @@
-// Topbar component CSS start
+/*--------------------------------------------------------------
+# Topbar component
+--------------------------------------------------------------*/
 
 .topbar {
   padding: 1rem;
@@ -6,7 +8,7 @@
   font-size: 0.9rem;
   transition: all 0.5s;
   background-color: black;
-  color: rgba(255, 255, 255, 0.6);
+  color: $black-background-font-color;
   .contact-info {
     & i {
       //padding-right: .2rem;
@@ -16,7 +18,7 @@
     & a {
       text-decoration: none;
       line-height: 1;
-      color: rgba(255, 255, 255, 0.6);
+      color: $black-background-font-color;
       transition: 0.3s;
       &:hover {
         color: #ffffff;
@@ -34,8 +36,7 @@
       font-size: 1rem;
       line-height: 0.9rem;
       transition: 0.3s;
-      color: rgba(255, 255, 255, 0.5);
-
+      color: $black-background-font-color;
       &:not(:last-child) {
         padding-right: 0.3rem;
       }
@@ -47,13 +48,16 @@
 }
 // Topbar component CSS end
 
-//landing page start
+/*--------------------------------------------------------------
+# Landing Page
+--------------------------------------------------------------*/
 .hero {
   width: 100%;
   max-width: 100%;
   height: 85vh;
+  background-color: $secondary-color-2; //fallback color
   //background: linear-gradient(105deg,#223c56, #e9ecef), url(../img/10-2.JPG);
- // background: $black-background; /* fallback for old browsers */
+  // background: $black-background; /* fallback for old browsers */
   background: -webkit-linear-gradient(
       105deg,
       rgba(141, 45, 226, 0.32),
@@ -140,14 +144,10 @@
   }
 }
 
-
-
-
-
 //Home Page main content start
 
 h3.heading {
-  color:#191919;
+  color: $section-heading-color;
   font-size: 1.9rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -157,21 +157,23 @@ h3.heading {
   width: 5rem;
   height: 0.2rem;
   background-color: #884beb;
-  background-image: linear-gradient(90deg, #4776E6, #884beb 90%);
+  background-image: linear-gradient(90deg, #4776e6, #884beb 90%);
   // margin: 0 auto 1rem;
-  margin: 0 auto ;
+  margin: 0 auto;
 }
-//Testimonials Page start
+/*--------------------------------------------------------------
+# Testimonials section
+--------------------------------------------------------------*/
 .testimonials {
-  background-color: #e9ecef;
+  background-color: $light-grey-1;
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
- 
-  &-row{
-    margin-top:2rem;
+
+  &-row {
+    margin-top: 2rem;
   }
   &-image {
     width: 100%;
@@ -191,15 +193,15 @@ h3.heading {
   }
 }
 
-//Clients Component start
+/*--------------------------------------------------------------
+# Clients/Brands section
+--------------------------------------------------------------*/
 .clients {
-  &-row{
-     background-color: $light-grey-3;
-    margin-top:2rem;
-    //border-top: 1px solid #ececec;
-    //border-left: 1px solid #ececec;
+  &-row {
+    background-color: $light-grey-3;
+    margin-top: 2rem;
   }
-  
+
   .client-logo {
     padding: 1.5rem;
     display: flex;
@@ -220,7 +222,7 @@ h3.heading {
       height: 2.5rem;
       filter: grayscale(100%);
       -webkit-filter: grayscale(100%);
-}
+    }
 
     &:hover img {
       filter: none;
@@ -235,56 +237,46 @@ h3.heading {
 }
 //Clients Component end
 
-
-
-
-// Portfolio component start
+/*--------------------------------------------------------------
+# Portfolio section
+--------------------------------------------------------------*/
 .portfolio {
-  height:auto;
-
-  &-row{
-    margin-top:2rem;
+  height: auto;
+  &-row {
+    margin-top: 2rem;
     //text-align: center;;
   }
   @media (min-width: 768px) {
     .carousel-multi-item-2 .col-md-4 {
-    float: left;
-    width: 33%;
-    max-width: 100%; } }
-    
-    .carousel-multi-item-2 .card img {
-    border-radius: 2px; }
-
-
-    
-  .img-fluid{
-    width:100%;
-    height:auto;
+      float: left;
+      width: 33%;
+      max-width: 100%;
+    }
   }
 
-  .controls-top{
-  
-  font-size: 3rem;
-  padding-right: 1rem;
-  a{
-    color:$primary-color-1;
+  .carousel-multi-item-2 .card img {
+    border-radius: 2px;
   }
+  .img-fluid {
+    width: 100%;
+    height: auto;
   }
-  
- // overflow: scroll;
-  .portfoilo-container{
+  .controls-top {
+    font-size: 3rem;
+    padding-right: 1rem;
+    a {
+      color: $primary-color-1;
+    }
+  }
+
+  .portfoilo-container {
     position: relative;
-    height:auto;
-    //width:auto;
+    height: auto;
   }
-   .carousel-inner{
-    min-height:300px;
-    //overflow: scroll;
-    //width:auto;
+  .carousel-inner {
+    min-height: 300px;
   }
   .portfolio-item {
-   // margin-bottom: 2rem;
-    //padding:2rem;
   }
   #portfolio-filters {
     padding: 0;
@@ -294,25 +286,33 @@ h3.heading {
     text-align: center;
     //border-radius: 50px;
     /* display: inline-block; */
-   // display: inline-flex;
+    // display: inline-flex;
     & li {
       cursor: pointer;
       display: inline-block;
-      padding: .6rem .9rem;
+      padding: 0.6rem 0.9rem;
       font-size: 1rem;
       font-weight: 500;
       line-height: 1;
-      text-transform: uppercase;     
-      margin-bottom: .3rem;
+      text-transform: uppercase;
+      margin-bottom: 0.3rem;
       transition: all 0.3s ease-in-out;
-     
+
       &:hover,
       &.filter-active {
         color: #fff;
         background: $primary-color-1;
-        background-image: linear-gradient(to right bottom, $primary-color-1, $primary-color-2);
-    background-image: -webkit-linear-gradient(to right bottom,$primary-color-1, $primary-color-2);
-       // background-color: $primary-color-1;
+        background-image: linear-gradient(
+          to right bottom,
+          $primary-color-1,
+          $primary-color-2
+        );
+        background-image: -webkit-linear-gradient(
+          to right bottom,
+          $primary-color-1,
+          $primary-color-2
+        );
+        // background-color: $primary-color-1;
       }
     }
   }
@@ -320,38 +320,49 @@ h3.heading {
 
 // Portfolio component end
 
-//Service component start
+/*--------------------------------------------------------------
+# Service section
+--------------------------------------------------------------*/
 .services {
-  .service-text{
-    blockquote i{
-      color: #7c3be6;
+  .service-text {
+    blockquote i {
+      color: $secondary-color-3;
     }
   }
   .service-heading {
     color: $secondary-color;
-    margin-bottom: 1rem;
-   
+    //margin-bottom: 1rem;
+
     position: relative;
-    &::before{
-      content:"";
-      position:absolute;
-      bottom:-4px;
-      width: 3rem;
-      height: 0.2rem;
-      background-color: #884beb;
-      background-image: linear-gradient(90deg,#4776E6, #884beb 90%);
-    }
+    // &::before {
+    //   content: "";
+    //   position: absolute;
+    //   top:0;
+    //  // bottom: -4px;
+    //   width: 3rem;
+    //   height: 0.2rem;
+    //   background-color: $heading-gradient-1;
+    //   background-image: linear-gradient(
+    //     90deg,
+    //     $heading-gradient-2,
+    //     $heading-gradient-1 90%
+    //   );
+    //   background-image: -webkit-linear-gradient(
+    //     90deg,
+    //     $heading-gradient-2,
+    //     $heading-gradient-1 90%
+    //   );
+    // }
   }
-  .service-item-list i{
-    color:$secondary-color;
-    font-size:1.2rem;
+  .service-item-list i {
+    color: $secondary-color;
+    font-size: 1.2rem;
   }
   .service-image-row-right {
     background-color: $top-footer-background;
-    padding:2rem;
-    color:$black-background-font-color;
+    padding: 2rem;
+    color: $black-background-font-color;
     span {
-      
       color: #fbfbfb1f;
       position: absolute;
       top: 3rem;
@@ -360,16 +371,24 @@ h3.heading {
       z-index: 13;
     }
     .service-image-right img {
-      
-      //border-radius: 5px;
       box-shadow: 1rem 1rem 0px 0px $primary-color-1;
     }
   }
   .service-image-row-left {
- background-color: #ffcba261;
- background-image: linear-gradient(to right bottom,rgb(255, 255, 255),#f3d4bc61  50%,#ffcba261 90%);
- background-image: -webkit-linear-gradient(to right bottom,rgb(255, 255, 255),#f3d4bc61  20%,#ffcba261 90%);
-    padding:2rem;
+    background-color: #ffcba261;
+    background-image: linear-gradient(
+      to right bottom,
+      rgb(255, 255, 255),
+      #f3d4bc61 50%,
+      #ffcba261 90%
+    );
+    background-image: -webkit-linear-gradient(
+      to right bottom,
+      rgb(255, 255, 255),
+      #f3d4bc61 20%,
+      #ffcba261 90%
+    );
+    padding: 2rem;
     span {
       color: rgba(134, 137, 140, 0.15);
       position: absolute;
@@ -378,104 +397,70 @@ h3.heading {
       font-size: 9rem;
       z-index: 13;
     }
-   
-    // .service-heading {
-    //   color: $primary-color-1;
-    //   margin-bottom: 1rem;;
-    //   blockquote{
-    //    // padding-top:2rem !important;
-    //   }
-    // }
+
     .service-image-left img {
-      //border-radius: 5px;
       box-shadow: -1rem -1rem 0px 0px $primary-color-1;
     }
-    
-    
   }
-  
 
   .key-engagements {
-    //padding-top: 2rem;
-    padding-left:1rem;
-    color:$bottom-footer-background;
-    font-weight:600;
+    padding-left: 1rem;
+    color: $bottom-footer-background;
+    font-weight: 600;
   }
   .key-engagements-right {
-    //padding-top: 2rem;
-    padding-left:1rem;
-    color:#fff;
-    font-weight:600;
+    padding-left: 1rem;
+    color: #fff;
+    font-weight: 600;
   }
- 
 }
 
 
-
-.contact-footer{
-  //-top: 2rem;
-  .contact-heading{
+/*--------------------------------------------------------------
+# Contact section
+--------------------------------------------------------------*/
+.contact-footer {
+  position: relative;
+  .contact-heading {
     padding: 10px;
     color: white;
     background: #f83600;
     background-image: linear-gradient(to left, #f83600, #fe8c00);
-    background-image: -webkit-linear-gradient(to right bottom, #f83600, #fe8c00);
+    background-image: -webkit-linear-gradient(
+      to right bottom,
+      #f83600,
+      #fe8c00
+    );
     color: #fff;
   }
-  .heading-underline{
-    margin: 0 auto ;
+  .heading-underline {
+    margin: 0 auto;
   }
-  .contact-row{
+  .contact-row {
     //margin-top:2rem;
     background-color: $top-footer-background;
   }
-}
-.contact-footer{
- // background-color: $black-background;
-  position: relative;
 
-.contact-info-footer{
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
-  padding:2rem;
-  background-color: $top-footer-background;
-  //align-items: center;
-  //padding-top:2rem;
-  h5{
-    color:#fff
-  }
-  p{
+  
+  .contact-info-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    background-color: $top-footer-background;
+    h5 {
+      color: #fff;
+    }
+    p {
       color: $black-background-font-color;
-   // font-size: 0.85rem;
-    //line-height: 1.6rem;
+    }
+    .info i {
+      color: $primary-color-1;
+      font-size: 3rem;
+      padding-right: 1rem;
+    }
   }
-  .info i{
-    color:$primary-color-1;
-    font-size:3rem;
-    padding-right:1rem;
-    // font-size: 1.3rem;
-    // float: left;
-    // width: 44px;
-    // height: 2.7rem;
-    // border: 1px solid $primary-color-1
-    //  display: flex;
-    //  justify-content: center;
-    //  align-items: center;
-    // border-radius:3.2rem;
-    // transition: all 0.3s;
-    // -webkit-border-radius:3.2rem;
-    // -moz-border-radius:3.2rem;
-    // -ms-border-radius:3.2rem;
-    // -o-border-radius:3.2rem;
 }
-}
-
-
-
-}
-
-
 
 /*--------------------------------------------------------------
 # Back to top button
@@ -490,7 +475,6 @@ h3.heading {
 }
 
 .back-to-top i {
-  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -499,21 +483,20 @@ h3.heading {
   height: 40px;
   background: $primary-color-1;
   background-image: linear-gradient(
-        to right bottom,
-        $primary-color-1,
-        $primary-color-2
-      );
-      background-image: -webkit-linear-gradient(
-        to right bottom,
-        $primary-color-1,
-        $primary-color-2
-      );
+    to right bottom,
+    $primary-color-1,
+    $primary-color-2
+  );
+  background-image: -webkit-linear-gradient(
+    to right bottom,
+    $primary-color-1,
+    $primary-color-2
+  );
   color: #fff;
   transition: all 0.4s;
 }
 
 .back-to-top i:hover {
-  
   background-size: 250%;
   transition: 0.5s;
   color: #fff;
@@ -565,15 +548,17 @@ h3.heading {
   }
 }
 
-.whyus{
-  &-row{
-    margin-top:2rem;
+/*--------------------------------------------------------------
+# Why Us section
+--------------------------------------------------------------*/
+.whyus {
+  &-row {
+    margin-top: 2rem;
 
-    .reason{
-     h4{
-       color:$primary-color-1;
-     }
+    .reason {
+      h4 {
+        color: $primary-color-1;
+      }
     }
-    
   }
 }

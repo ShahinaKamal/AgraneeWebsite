@@ -1,3 +1,4 @@
+/*Below are the variables which can be configured or changed to create different theme for this project*/
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
 html {
   box-sizing: border-box; }
@@ -23,6 +24,9 @@ a:link, a:active, a:hover {
   background-color: #fe8c00;
   color: #e9ecef; }
 
+/*--------------------------------------------------------------
+# Topbar component
+--------------------------------------------------------------*/
 .topbar {
   padding: 1rem;
   min-height: 3rem;
@@ -47,16 +51,20 @@ a:link, a:active, a:hover {
     font-size: 1rem;
     line-height: 0.9rem;
     transition: 0.3s;
-    color: rgba(255, 255, 255, 0.5); }
+    color: rgba(255, 255, 255, 0.6); }
     .topbar .social-links a:not(:last-child) {
       padding-right: 0.3rem; }
     .topbar .social-links a:hover {
       color: #ffffff; }
 
+/*--------------------------------------------------------------
+# Landing Page
+--------------------------------------------------------------*/
 .hero {
   width: 100%;
   max-width: 100%;
   height: 85vh;
+  background-color: #004085;
   background: -webkit-linear-gradient(105deg, rgba(141, 45, 226, 0.32), rgba(75, 0, 224, 0.4)), url(../img/10-2.JPG);
   background: linear-gradient(105deg, rgba(141, 45, 226, 0.32), rgba(75, 0, 224, 0.4)), url(../img/10-2.JPG);
   background-size: cover;
@@ -121,9 +129,12 @@ h3.heading {
   width: 5rem;
   height: 0.2rem;
   background-color: #884beb;
-  background-image: linear-gradient(90deg, #4776E6, #884beb 90%);
+  background-image: linear-gradient(90deg, #4776e6, #884beb 90%);
   margin: 0 auto; }
 
+/*--------------------------------------------------------------
+# Testimonials section
+--------------------------------------------------------------*/
 .testimonials {
   background-color: #e9ecef;
   border-radius: 5px;
@@ -146,6 +157,9 @@ h3.heading {
   .testimonials hr {
     color: #7c3be6; }
 
+/*--------------------------------------------------------------
+# Clients/Brands section
+--------------------------------------------------------------*/
 .clients-row {
   background-color: #f2f2f2;
   margin-top: 2rem; }
@@ -175,6 +189,9 @@ h3.heading {
     -ms-transform: scale(1.1);
     -o-transform: scale(1.1); }
 
+/*--------------------------------------------------------------
+# Portfolio section
+--------------------------------------------------------------*/
 .portfolio {
   height: auto; }
   .portfolio-row {
@@ -208,12 +225,12 @@ h3.heading {
     .portfolio #portfolio-filters li {
       cursor: pointer;
       display: inline-block;
-      padding: .6rem .9rem;
+      padding: 0.6rem 0.9rem;
       font-size: 1rem;
       font-weight: 500;
       line-height: 1;
       text-transform: uppercase;
-      margin-bottom: .3rem;
+      margin-bottom: 0.3rem;
       transition: all 0.3s ease-in-out; }
       .portfolio #portfolio-filters li:hover, .portfolio #portfolio-filters li.filter-active {
         color: #fff;
@@ -221,21 +238,15 @@ h3.heading {
         background-image: linear-gradient(to right bottom, #f83600, #fe8c00);
         background-image: -webkit-linear-gradient(to right bottom, #f83600, #fe8c00); }
 
+/*--------------------------------------------------------------
+# Service section
+--------------------------------------------------------------*/
 .services .service-text blockquote i {
   color: #7c3be6; }
 
 .services .service-heading {
   color: #f36b0a;
-  margin-bottom: 1rem;
   position: relative; }
-  .services .service-heading::before {
-    content: "";
-    position: absolute;
-    bottom: -4px;
-    width: 3rem;
-    height: 0.2rem;
-    background-color: #884beb;
-    background-image: linear-gradient(90deg, #4776E6, #884beb 90%); }
 
 .services .service-item-list i {
   color: #f36b0a;
@@ -280,22 +291,22 @@ h3.heading {
   color: #fff;
   font-weight: 600; }
 
-.contact-footer .contact-heading {
-  padding: 10px;
-  color: white;
-  background: #f83600;
-  background-image: linear-gradient(to left, #f83600, #fe8c00);
-  background-image: -webkit-linear-gradient(to right bottom, #f83600, #fe8c00);
-  color: #fff; }
-
-.contact-footer .heading-underline {
-  margin: 0 auto; }
-
-.contact-footer .contact-row {
-  background-color: #1e1e1e; }
-
+/*--------------------------------------------------------------
+# Contact section
+--------------------------------------------------------------*/
 .contact-footer {
   position: relative; }
+  .contact-footer .contact-heading {
+    padding: 10px;
+    color: white;
+    background: #f83600;
+    background-image: linear-gradient(to left, #f83600, #fe8c00);
+    background-image: -webkit-linear-gradient(to right bottom, #f83600, #fe8c00);
+    color: #fff; }
+  .contact-footer .heading-underline {
+    margin: 0 auto; }
+  .contact-footer .contact-row {
+    background-color: #1e1e1e; }
   .contact-footer .contact-info-footer {
     display: flex;
     flex-direction: column;
@@ -378,6 +389,9 @@ h3.heading {
   100% {
     transform: rotate(360deg); } }
 
+/*--------------------------------------------------------------
+# Why Us section
+--------------------------------------------------------------*/
 .whyus-row {
   margin-top: 2rem; }
   .whyus-row .reason h4 {
@@ -407,7 +421,10 @@ button.navbar-toggler {
   .navbar-brand img {
     height: 2.5rem; }
 
-.navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link {
+.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .show > .nav-link {
   background: #fe8c00;
   background-image: -webkit-linear-gradient(to right, #f83600, #fe8c00);
   background: linear-gradient(to right, #f83600, #fe8c00);
@@ -416,9 +433,9 @@ button.navbar-toggler {
   -webkit-text-fill-color: transparent; }
 
 .navbar-nav .nav-item {
-  padding-right: .7rem; }
+  padding-right: 0.7rem; }
   .navbar-nav .nav-item .nav-link {
-    padding-top: .8rem; }
+    padding-top: 0.8rem; }
     .navbar-nav .nav-item .nav-link:hover {
       background: #fe8c00;
       background: -webkit-linear-gradient(to right, #f83600, #fe8c00);
