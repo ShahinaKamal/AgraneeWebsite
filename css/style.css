@@ -246,6 +246,7 @@ h3.heading {
 
 .services .service-heading {
   color: #f36b0a;
+  text-transform: uppercase;
   position: relative; }
 
 .services .service-item-list i {
